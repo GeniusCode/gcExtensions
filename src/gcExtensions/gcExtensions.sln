@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gcExtensions", "gcExtensions\gcExtensions.csproj", "{AA30B4E4-633A-45BA-A208-72A44CC13086}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gcExtensions.Tests", "gcExtensions.Tests\gcExtensions.Tests.csproj", "{3E40A5C0-2D68-46B5-9E17-DF473C410222}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{AA30B4E4-633A-45BA-A208-72A44CC13086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA30B4E4-633A-45BA-A208-72A44CC13086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA30B4E4-633A-45BA-A208-72A44CC13086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E40A5C0-2D68-46B5-9E17-DF473C410222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E40A5C0-2D68-46B5-9E17-DF473C410222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E40A5C0-2D68-46B5-9E17-DF473C410222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E40A5C0-2D68-46B5-9E17-DF473C410222}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
