@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gcExtensions</id>
+    <version>1.0</version>
+    <title>Extensions Library</title>
+    <authors>GeniusCode</authors>
+    <owners>GeniusCode</owners>
+    <projectUrl>https://github.com/GeniusCode/gcExtensions</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library containing helpful extensions</description>
+    <summary>helpful extensions library</summary>
+    <tags>extensions</tags>
+  </metadata>
+  <files>
+    <file src="src\gcExtensions\gcExtensions\bin\Release\gcExtensions.dll" target="lib\net35" />
+	<file src="src\gcExtensions\gcExtensions\bin\Release\gcExtensions.dll" target="lib\net40" />
+  </files>
+</package>
