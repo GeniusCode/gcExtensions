@@ -5,20 +5,17 @@ using System.Text;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace gcExtensions.Tests.Dictionary
+namespace gcExtensions.Tests.Dictionary.AddIfUnique
 {
     [TestFixture]
-    public class When_getting_a_value_for_an_existing_key : SpecificationBase
+    public class When_adding_key_that_doesnt_exist_yet : SpecificationBase
     {
         private IDictionary<int, string> _dictionary;
-        string _value;
         private int _originalDictionaryCount;
-        private bool _wasCreated;
-
+        bool _returnValue;
 
         protected override void Given()
         {
-            
             _dictionary = new Dictionary<int, string>
                               {
                                 {0, "George"}, 
@@ -32,26 +29,31 @@ namespace gcExtensions.Tests.Dictionary
 
         protected override void When()
         {
-            _value = _dictionary.GetOrCreateValue(0, () => "unkown", out _wasCreated);
+            _returnValue = _dictionary.AddIfUnique("Gregory", 5);
         }
 
         [Then]
-        public void value_should_match_dictionary()
+        public void dictionary_item_should_be_added()
         {
-            _value.Should().BeEquivalentTo("George");
+            _dictionary.Count.Should().Be(_originalDictionaryCount + 1);
         }
 
         [Then]
-        public void dictionary_count_should_be_unchanged()
+        public void new_dictionary_key_should_exist()
         {
-            _originalDictionaryCount.Should().Be(_dictionary.Count);
+            _dictionary.ContainsKey(5).Should().BeTrue();
         }
 
         [Then]
-        public void wascreated_variable_should_be_false()
+        public void dictionary_value_of_new_key_should_be_correct()
         {
-            _wasCreated.Should().BeFalse();
+            _dictionary[5].Should().Be("Gregory");
         }
 
+        [Then]
+        public void should_return_true()
+        {
+            _returnValue.Should().BeTrue();
+        }
     }
 }

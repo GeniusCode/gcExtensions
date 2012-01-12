@@ -52,11 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dictionary\When_getting_a_value_for_an_existing_key.cs" />
-    <Compile Include="Dictionary\When_getting_a_value_for_a_nonexistant_key.cs" />
+    <Compile Include="Dictionary\AddIfUniqueOrCreate\When_trying_to_add_key_that_already_exists_with_false_predicate.cs" />
+    <Compile Include="Dictionary\AddIfUniqueOrCreate\When_adding_key_that_doesnt_exist_yet.cs" />
+    <Compile Include="Dictionary\AddIfUniqueOrCreate\When_trying_to_add_key_that_already_exists_with_true_predicate.cs" />
+    <Compile Include="Dictionary\AddIfUnique\When_adding_key_that_doesnt_exist_yet.cs" />
+    <Compile Include="Dictionary\AddIfUnique\When_trying_to_add_key_that_already_exists.cs" />
+    <Compile Include="Dictionary\GetOrCreate\When_getting_a_value_for_an_existing_key.cs" />
+    <Compile Include="Dictionary\GetOrCreate\When_getting_a_value_for_a_nonexistant_key.cs" />
     <Compile Include="Support\ThenAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\SpecificationBase.cs" />
+    <Compile Include="TryAs\When_cast_successful.cs" />
+    <Compile Include="TryAs\When_cast_unsuccessful.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\gcExtensions\gcExtensions.csproj">
@@ -67,6 +74,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -3,7 +3,7 @@ using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace gcExtensions.Tests.Dictionary
+namespace gcExtensions.Tests.Dictionary.GetOrCreate
 {
     [TestFixture]
     public class When_getting_a_value_for_a_nonexistant_key : SpecificationBase
